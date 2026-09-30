@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Redirecting...</title></head>
+<body>
+<script src="js/config.js"></script>
+<script src="js/services/auth.js"></script>
+<script>
+    const role = getRole();
+    if (getToken() && role) {
+        window.location.href = dashboardPathFor(role);
+    } else {
+        window.location.href = "login.html";
+    }
+</script>
+</body>
+</html>
